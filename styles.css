@@ -1,0 +1,190 @@
+/* ALL PAGES */
+    html {
+        height: 100%;
+    }
+    :root {
+      --primary-color: #9DC08B;
+      --text: #40513B;
+      --button-bg: #609966;
+     
+    }
+
+    body {
+        height: 100%;
+      margin: 0;
+      background-color: var(--primary-color);
+      color: var(--text);
+      font-size: 1.2rem;
+      line-height: 1.5;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+} 
+    
+    h1,
+    h2,
+    h3,
+    h4 {
+      text-align: center;
+      margin: 20px 0;
+
+    }
+
+    h4{
+      font-size: .75rem;
+    }
+
+    p {
+      margin: 12px 0;
+    }
+
+    button {
+      padding: 10px 24px;
+      margin-left: 15px;
+      margin-top: 20px;
+      background-color: #EDF1D6;
+      border: solid 2px var(--button-border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 200ms;
+    }
+
+    button:hover {
+      background-color: #609966;
+      color: white;
+    }
+
+  .pollen-btn, .air-btn {
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 30px 10px;
+  
+}
+
+    #form-location_search  {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    #form-location_search p,
+    #form-location_search h2{
+      margin: 0;
+    }
+
+    #form-location_search a {
+      font-size: 0.8rem;
+    }
+
+    #form-location_search form {
+      position: relative;
+      display: flex;
+      flex-grow: 0;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    #form-location_search label {
+      pointer-events: none;
+      font-size: 1rem;
+      font-family: sans-serif;
+      position: absolute;
+      top: 10px;
+      width: 100px;
+      left: 38%;
+      color: black;
+      transition: 100ms ease-out;
+    }
+
+    #form-location_search input {
+      font-size: 1rem;
+      padding: 10px;
+    }
+
+
+    #form-location_search input:focus~label,
+    #form-location_search input:not(:placeholder-shown)~label {
+      top: -24px;
+      color: var(--text-light);
+    }
+
+    #form{
+      width: 100%;
+      max-width: 400px;
+      margin: 0, auto;
+    }
+
+
+    /* MAIN PAGE */
+
+.landing-body, .pollen-body, .air-body {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-h1 {
+  font-size: 70px;
+  margin: 0 auto;
+}
+
+.landing-h2 {
+  font-size: 25px;
+  margin: 20px auto 0;
+}
+    .landing-footer {
+      font-size: .5rem;
+      text-align: center;
+      padding: 30px;
+      margin: 10px 0;
+    }
+
+    .landing-footer p{
+      margin-top: 10px;
+      justify-content: center;
+      margin: 5px 0;
+    }
+
+    /* Pollen and Air Quality */
+
+    #allergy-information {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    #allergy-content{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #allergy-results{
+      margin-bottom: 25px;
+    }
+
+    .allergy-footer {
+      font-size: .5rem;
+      text-align: center;
+      margin: 48px 0;
+    }
+
+    .allergy-footer p{
+      margin-top: 10px;
+      justify-content: center;
+      margin: 5px 0;
+    }
+  
