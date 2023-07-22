@@ -13,16 +13,13 @@
 
   <div id="form-location_search">
     <h4>Search Pollen and Air Quality by location</h4>
-    <form id = "form">
-      <input name="location-search" id="form-textBox" type="text" placeholder=" " />
-      <label id="form-textBox">
-        Enter location
-      </label>
-
+    <form id ="form">
+      <input name="locationSearch" id="formTextBox" type="text" placeholder=" " />
+      <label id="formTextBox">Enter location</label>
 
       <div class="btn-container">
-        <button class="pollen-btn" type="submit" formaction="pollen.html">Pollen Page</button>
-        <button class="air-btn" type="submit" formaction="air.html">Air Quality</button>
+        <button class="pollen-btn" id="pollenButton" type="submit" >Pollen Page</button>
+        <button class="air-btn" id="airButton" type="submit" >Air Quality</button>
       </div>
     </form>
   </div>
@@ -31,7 +28,7 @@
     <p>&copy; 2023 Local Allergen & Air Quality Information</p>
     <p>Developed by Ashley Frank and Olivia Campbell for education purposes</p>
   </footer>
-
+  
   <script src="index.js"></script>
 </body>
 </html>
