@@ -188,3 +188,46 @@
       margin: 5px 0;
     }
   
+
+    /* Air Quality */
+
+    .search-container {
+    width: 100%;
+}
+
+.search-form {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.search-input {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  justify-content: center;
+}
+
+.search-input input[type="text"] {
+  width: 100%;
+  flex-grow: 1;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  background-color: #eee;
+  
+}
+
+.search-input button[type="submit"] {
+  
+  height: 40px;
+  width: 100px;
+  border: none;
+  background-color:#40513B;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  color:#EDF1D6;
+  margin-left: -4px;
+}
