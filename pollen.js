@@ -39,6 +39,7 @@ async function longLat (storedLocation){
         getPollenInfo(lat,lon)  
     
     } catch(err){
+        pollenResults.innerHTML =" "
         pollenHeadline.innerHTML = err.message
         return
     } 

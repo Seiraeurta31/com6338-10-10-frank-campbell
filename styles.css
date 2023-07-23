@@ -1,15 +1,29 @@
 /* ALL PAGES */
     html {
         height: 100%;
+        margin: 0;
+        padding: 0;
+        border: 0;
     }
     :root {
-      --primary-color: #9DC08B;
-      --text: #40513B;
+      --primary-color: #c1dcb3;
+      --text: rgb(55, 78, 60);;
       --button-bg: #609966;
      
     }
 
     body {
+    background-color: var(--primary-color);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--text);
+    margin: 0;
+    height: 100%;
+    /* min-height: 100vh; */
+    display: flexbox;
+    flex-direction: column;
+    }
+
+    /* body {
         height: 100%;
       margin: 0;
       background-color: var(--primary-color);
@@ -19,15 +33,41 @@
       font-family: Arial, Helvetica, sans-serif;
       display: flex;
       flex-direction: column;
+    } */
+
+    header {
+      background-color: rgb(55, 78, 60);
+      box-shadow: 1px 1px 6px rgb(113, 113, 113);
     }
 
-    main {
+    footer {
+      background-color: #EDF1D6;
+      box-shadow: 1px 1px 6px rgb(113, 113, 113);
+    }
+
+    main, nav, aside {
+      max-width: 800px;
+      margin: 0 auto;
+      margin-top: 50px;
+      padding: 0 12px;
+    }
+
+    main{
+      min-height: 100vh;
+    }
+
+    header{
+      min-height: 10vh;
+      padding: 10px;
+    }
+
+    /* main {
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-grow: 1;
-} 
+}  */
     
     h1,
     h2,
@@ -35,7 +75,13 @@
     h4 {
       text-align: center;
       margin: 20px 0;
+    }
 
+    header h2{
+      color: #EDF1D6;
+      font-size: 2.5rem;
+      text-align: left;
+      padding-left: 20px;
     }
 
     h4{
@@ -69,8 +115,7 @@
   cursor: pointer;
   font-size: 1rem;
   margin: 30px 10px;
-  
-}
+  }
 
     #form-location_search  {
       display: flex;
@@ -129,11 +174,11 @@
 
     /* MAIN PAGE */
 
-.landing-body, .pollen-body, .air-body {
+/* .landing-body, .pollen-body, .air-body {
   height: 100vh;
   justify-content: center;
   align-items: center;
-}
+} */
 
 .landing-h1 {
   font-size: 70px;
@@ -144,18 +189,21 @@
   font-size: 25px;
   margin: 20px auto 0;
 }
-    .landing-footer {
+    footer {
       font-size: .5rem;
       text-align: center;
-      padding: 30px;
-      margin: 10px 0;
-    }
-
-    .landing-footer p{
+      padding: 10px;
+      margin: 0;
       margin-top: 10px;
       justify-content: center;
       margin: 5px 0;
     }
+
+    /* .landing-footer p{
+      margin-top: 10px;
+      justify-content: center;
+      margin: 5px 0;
+    } */
 
     /* Pollen and Air Quality */
 
