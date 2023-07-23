@@ -44,6 +44,8 @@ GOOGLE API KEY: AIzaSyDm9WPv8_3Wnruym8e30Z3qhTsNJm0dBDc
 
 Pollen API URL: https://api.breezometer.com/pollen/v2/forecast/daily?lat={latitude}&lon={longitude}&key=YOUR_API_KEY&features={Features_List}&days={Number_of_Days}
 
+breezometer API for Pollen page:d8f9dcc96f87425a8e375f4f7ae2c788
+
 To include map image to page: https://developers.google.com/maps/documentation/javascript/adding-a-google-map#maps_add_map-javascript 
 
 https://maps.googleapis.com/maps/api/geocode/json?address=cleveland&key=AIzaSyDm9WPv8_3Wnruym8e30Z3qhTsNJm0dBDc
