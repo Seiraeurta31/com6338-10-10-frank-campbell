@@ -9,9 +9,10 @@
   
 </head>
 <body class="air-body">
-	<h1 class="air-h1">Air Quality Levels for <span id="locationName"></span></h1>
+	<h1 class="air-h1" id="airHeader1">Air Quality Levels for {location}</h1>
   <div id="allergy-information">
-    <section class = "allergy-results">Show results here</section>
+    <section id = "air-results">Show results here</section>
+
  <div class="search-container">
           <section id="air"></section>
             <form class="search-form">
@@ -24,8 +25,8 @@
 
 
 	  <div class="btn-container">
-      <button class="main-btn" onclick="location.href='index.html';">Main Page</button>
-      <button class="pollen-btn" onclick="location.href='pollen.html';">Pollen Page</button>
+       <button class="main-btn" id="mainButton" onclick="location.href='index.html';">Main Page</button>
+      <button class="pollen-btn" id="pollenButton" onclick="location.href='pollen.html';">Pollen Page</button>
     </div>
   </div>
 
