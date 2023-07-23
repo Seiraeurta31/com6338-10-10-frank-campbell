@@ -10,6 +10,12 @@ pollenResults.innerHTML =" "
 
 var searchBtn = document.getElementById("searchBtn").addEventListener("click", newLocation)
 
+if (storedLocation) {
+    storedLocation =
+      storedLocation.charAt(0).toUpperCase() + storedLocation.slice(1).toLowerCase()
+    localStorage.setItem("Location", storedLocation)
+  }
+
 latLongData(storedLocation)
 
 //Retrieves lat and long data from map API
@@ -17,9 +23,9 @@ async function latLongData (storedLocation){
     console.log("function triggered")
     try{
         //input user location input to recieve location info
-        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${storedLocation}&units=imperial&appid=08ace7633004d5ddf370678a8c052e90`)
+        const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${storedLocation},US&units=imperial&appid=08ace7633004d5ddf370678a8c052e90`)
         if(res.status !== 200) throw new Error('Location not found')
-        pollenHeadline.innerHTML = `Local Pollen Levels for ${storedLocation}`
+        pollenHeadline.innerHTML = `Pollen Levels in ${storedLocation}`
         var locationInfo = await res.json() 
         //console.log(locationInfo) //verify info in console
     
@@ -33,7 +39,7 @@ async function latLongData (storedLocation){
         getPollenInfo(lat,lon)  
     
     } catch(err){
-        pollenResults.innerHTML = err.message
+        pollenHeadline.innerHTML = err.message
         return
     } 
 }
