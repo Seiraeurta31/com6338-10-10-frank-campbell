@@ -16,10 +16,10 @@ if (storedLocation) {
     localStorage.setItem("Location", storedLocation)
   }
 
-latLongData(storedLocation)
+longLat(storedLocation)
 
 //Retrieves lat and long data from map API
-async function latLongData (storedLocation){
+async function longLat (storedLocation){
     console.log("function triggered")
     try{
         //input user location input to recieve location info
@@ -50,7 +50,7 @@ async function latLongData (storedLocation){
 async function newLocation(){
     var location = document.querySelector('input').value.trim() 
     localStorage.setItem('Location', location)
-    latLongData(storedLocation)
+    longLat(storedLocation)
 }
 
 

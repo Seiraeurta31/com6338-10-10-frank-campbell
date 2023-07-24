@@ -9,26 +9,32 @@
   
 </head>
 <body class="air-body">
-	<h1 class="air-h1" id="airHeader1">Air Quality Levels for {location}</h1>
-  <div id="allergy-information">
-    <section id = "air-results">Show results here</section>
 
- <div class="search-container">
-          <section id="air"></section>
+  <header>
+    <h2>Allergen Finder</h2>
+    <div class="search-container">
+          <section id="finder"></section>
             <form class="search-form">
                 <div class="search-input">
-                    <input name="search" id="air-search" class="air-search" type="text" placeholder="Enter Location"/>
-                    <button type="submit">Search</button>
+                    <input name="search" id="allergySearch" class="allergy-search" type="text" placeholder="Enter Location"/>
+                    <button type="submit" id="searchBtn">Search</button>
                 </div>
             </form>
             </div>
+  </header>
+<main>
+	<h1 class="air-h1" id="airTop">Air Quality Levels for {location}</h1>
+  <div id="allergy-information">
+    <section id = "air-results">Show results here</section>
 
 
 	  <div class="btn-container">
-       <button class="main-btn" id="mainButton" onclick="location.href='index.html';">Main Page</button>
       <button class="pollen-btn" id="pollenButton" onclick="location.href='pollen.html';">Pollen Page</button>
+<button class="main-btn" id="mainButton" onclick="location.href='index.html';">Main Page</button>
+
     </div>
   </div>
+</main>
 
   <footer class="allergy-footer">
     <p>&copy; 2023 Local Allergen & Air Quality Information</p>

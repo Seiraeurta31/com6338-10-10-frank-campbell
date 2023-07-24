@@ -12,6 +12,15 @@
   
   <header>
     <h2>Allergen Finder</h2>
+    <div class="search-container">
+          <section id="finder"></section>
+            <form class="search-form">
+                <div class="search-input">
+                    <input name="search" id="allergySearch" class="allergy-search" type="text" placeholder="Enter Location"/>
+                    <button type="submit" id="searchBtn">Search</button>
+                </div>
+            </form>
+      </div>
   </header>
 
 
@@ -19,18 +28,13 @@
     <h1 class="pollen-h1" id="pollenHeader1">Local Pollen Levels for {location}</h1>
     <div id="allergy-information">
       <section id = "pollen-results"></section>
-      <div class="search-container">
-          <section id="air"></section>
-            <form class="search-form">
-                <div class="search-input">
-                    <input name="search" id="airSearch" class="air-search" type="text" placeholder="Enter Location"/>
-                    <button type="submit" id="searchBtn">Search</button>
-                </div>
-            </form>
-      </div>
+      
       <div class="btn-container">
-        <button class="main-btn" id="mainButton" onclick="location.href='index.html';">Main Page</button>
+        
         <button class="air-btn" id="airButton" onclick="location.href='air.html';">Air Quality</button>
+        <button class="main-btn" id="mainButton" onclick="location.href='index.html';">Main Page</button>
+
+
       </div>
     </div>
   </main>
