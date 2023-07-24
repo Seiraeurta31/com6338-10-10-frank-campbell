@@ -45,6 +45,12 @@
     }
 
     footer {
+      position: sticky;
+      bottom: 0;
+      font-size: 0.5rem;
+      text-align: center;
+      padding: 10px;
+      margin: 5px 0;
       background-color: #EDF1D6;
       box-shadow: 1px 1px 6px rgb(113, 113, 113);
     }
@@ -128,20 +134,34 @@
   margin: 10px 10px;
   }
 
+  #formTextBox {
+    border-radius: 25px;
+    border: none;
+  width: 300px;
+  
+  cursor: pointer;
+  color:rgb(55, 78, 60);
+  
+  }
+
     #form-location_search  {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin-bottom: 25px;
+      padding: 20px;
+      
     }
 
     #form-location_search p,
     #form-location_search h2{
       margin: 0;
+      
     }
 
     #form-location_search a {
       font-size: 0.8rem;
+      
     }
 
     #form-location_search form {
@@ -151,6 +171,7 @@
       flex-wrap: wrap;
       justify-content: center;
       margin: 20px;
+      
      
     }
 
@@ -165,11 +186,15 @@
       color: black;
       transition: 100ms ease-out;
      
+      
+     
     }
 
     #form-location_search input {
       font-size: 1rem;
-      padding: 10px;
+      padding:20px;
+      background-color: #EDF1D6;
+      
     }
 
 
@@ -177,16 +202,21 @@
     #form-location_search input:not(:placeholder-shown)~label {
       top: -24px;
       color: var(--text-light);
+      
     }
 
     #form{
       width: 100%;
       max-width: 400px;
       margin: 0, auto;
+      
     }
 
 #formTextBox {
   margin-bottom: 40px;
+  padding: 10px 5px;
+  
+  
 }
     /* MAIN PAGE */
 
@@ -205,15 +235,7 @@
   font-size: 25px;
   margin: 20px auto 0;
 }
-    footer {
-      font-size: .5rem;
-      text-align: center;
-      padding: 10px;
-      margin: 0;
-      margin-top: 10px;
-      justify-content: center;
-      margin: 5px 0;
-    }
+    
 
     /* .landing-footer p{
       margin-top: 10px;
