@@ -109,6 +109,13 @@
       transition: 200ms;
     }
 
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
     button:hover {
       background-color: #609966;
       color: white;
@@ -118,7 +125,7 @@
   border-radius: 12px;
   cursor: pointer;
   font-size: 1rem;
-  margin: 30px 10px;
+  margin: 10px 10px;
   }
 
     #form-location_search  {
@@ -143,6 +150,8 @@
       flex-grow: 0;
       flex-wrap: wrap;
       justify-content: center;
+      margin: 20px;
+     
     }
 
     #form-location_search label {
@@ -155,6 +164,7 @@
       left: 38%;
       color: black;
       transition: 100ms ease-out;
+     
     }
 
     #form-location_search input {
@@ -175,7 +185,9 @@
       margin: 0, auto;
     }
 
-
+#formTextBox {
+  margin-bottom: 40px;
+}
     /* MAIN PAGE */
 
 /* .landing-body, .pollen-body, .air-body {
