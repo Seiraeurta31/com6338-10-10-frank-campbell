@@ -18,31 +18,24 @@
     color: var(--text);
     margin: 0;
     height: 100%;
-    /* min-height: 100vh; */
-    display: flexbox;
-    flex-direction: column;
+   
     }
-
-    /* body {
-        height: 100%;
-      margin: 0;
-      background-color: var(--primary-color);
-      color: var(--text);
-      font-size: 1.2rem;
-      line-height: 1.5;
-      font-family: Arial, Helvetica, sans-serif;
-      display: flex;
-      flex-direction: column;
-    } */
 
     header {
       background-color: rgb(55, 78, 60);
       box-shadow: 1px 1px 6px rgb(113, 113, 113);
-      display: flex;
+      padding: 20px;    }
+
+      /*
+.header-group {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-    }
+  
+} */
+
+
 
     footer {
       position: sticky;
@@ -66,41 +59,68 @@
       min-height: 100vh;
     }
 
-    header{
-      min-height: 10vh;
-      padding: 10px;
-    }
-
-    /* main {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
-}  */
     
-    
-    h2,
     h3,
     h4 {
       text-align: center;
       margin: 20px 0;
       
     }
-h1 {
-  text-align: center;
-    padding-top: 50px;
+    h1 {
+      text-align: center;
+      padding-top: 50px;
 
-}
-
-    header h2{
+    }
+/* needs t be moved to the left*/
+    .header-landing {     
       color: #EDF1D6;
-      font-size: 2.5rem;
-      text-align: left;
-      padding-left: 20px;
+      font-size: 3.5rem;
+      min-height: 10vh;
+      display: inline;
+     padding-left: 20px;
+     white-space: nowrap;
+     
+
+    }
+/*
+    .header-group {
+     color: #EDF1D6;
+      font-size: 3.5rem;
+      min-height: 10vh;
+      display: inline;
+     padding-left: 20px;}
+
+
+    
+.header-landing2 {     
+      color: #EDF1D6;
+      font-size: 3.5rem;
+      min-height: 10vh;
       white-space: nowrap;
+     padding-left: 20px;
+    
+    } */
+
+
+   #landing-b {
+      font-size: 1rem;
+      color:#EDF1D6;
+      text-align: left;
+      margin-top: 20px;
+      padding-left: 20px;
+     
     }
 
+    .landing-h1 {
+  font-size: 70px;
+  margin: 0 auto;
+}
+
+.landing-h2 {
+  font-size: 35px;
+  margin: 20px auto 0;
+  text-align: center;
+}
     h4{
       font-size: .75rem;
     }
@@ -233,15 +253,7 @@ h1 {
   align-items: center;
 } */
 
-.landing-h1 {
-  font-size: 70px;
-  margin: 0 auto;
-}
 
-.landing-h2 {
-  font-size: 25px;
-  margin: 20px auto 0;
-}
     
 
     /* .landing-footer p{
@@ -285,11 +297,12 @@ h1 {
     /* Air Quality */
 
     .search-container {
-    width: 100%;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding-right: 40px;
+  
   
 }
 
@@ -298,7 +311,7 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-left: auto;
+ 
 }
 
 .search-input {
@@ -337,16 +350,10 @@ h1 {
     }
 
 /* Default styles for larger screens */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-}
 
 .search-container {
   display: flex;
-  justify-content: flex-end;
+  margin: auto;
   align-items: center;
   padding-right: 40px;
 }
