@@ -77,9 +77,9 @@
       font-size: 3.5rem;
       min-height: 10vh;
       display: inline;
-     padding-left: 20px;
-     white-space: nowrap;
-     
+      padding-left: 20px;
+      white-space: nowrap;
+      
 
     }
 /*
@@ -111,16 +111,17 @@
      
     }
 
-    .landing-h1 {
-  font-size: 70px;
-  margin: 0 auto;
-}
+   .landing-h1 {
+      font-size: 70px;
+      margin: 0 auto;
+    }
 
-.landing-h2 {
-  font-size: 35px;
-  margin: 20px auto 0;
-  text-align: center;
-}
+    .landing-h2 {
+      font-size: 35px;
+      margin: 20px auto 0;
+      text-align: center;
+    }
+
     h4{
       font-size: .75rem;
     }
@@ -141,11 +142,11 @@
       transition: 200ms;
     }
 
-.btn-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
 
     button:hover {
@@ -153,22 +154,20 @@
       color: white;
     }
 
-  .pollen-btn, .air-btn, .main-btn {
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 10px 10px;
-  }
+    .pollen-btn, .air-btn, .main-btn {
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      margin: 10px 10px;
+    }
 
-  #formTextBox {
-    border-radius: 25px;
-    border: none;
-  width: 300px;
-  
-  cursor: pointer;
-  color:rgb(55, 78, 60);
-  
-  }
+    #formTextBox {
+      border-radius: 25px;
+      border: none;
+      width: 300px;
+      cursor: pointer;
+      color:rgb(55, 78, 60);
+    }
 
     #form-location_search  {
       display: flex;
@@ -182,12 +181,10 @@
     #form-location_search p,
     #form-location_search h2{
       margin: 0;
-      
     }
 
     #form-location_search a {
       font-size: 0.8rem;
-      
     }
 
     #form-location_search form {
@@ -197,8 +194,6 @@
       flex-wrap: wrap;
       justify-content: center;
       margin: 20px;
-      
-     
     }
 
     #form-location_search label {
@@ -211,17 +206,12 @@
       left: 38%;
       color:var(--text);
       transition: 200ms ease-out;
-      
-     
-      
-     
     }
 
     #form-location_search input {
       font-size: 1rem;
       padding:20px;
       background-color: #EDF1D6;
-      
     }
 
 
@@ -229,38 +219,20 @@
     #form-location_search input:not(:placeholder-shown)~label {
       top: -35px;
       color: var(--text-light);
-      
     }
 
     #form{
       width: 100%;
       max-width: 400px;
       margin: 0, auto;
-      
     }
 
-#formTextBox {
-  margin-bottom: 40px;
-  padding: 10px 5px;
-  
-  
-}
-    /* MAIN PAGE */
-
-/* .landing-body, .pollen-body, .air-body {
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-} */
-
-
+    #formTextBox {
+      margin-bottom: 40px;
+      padding: 10px 5px;
+    }
     
 
-    /* .landing-footer p{
-      margin-top: 10px;
-      justify-content: center;
-      margin: 5px 0;
-    } */
 
     /* Pollen and Air Quality */
 
@@ -297,91 +269,88 @@
     /* Air Quality */
 
     .search-container {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding-right: 40px;
-  
-  
-}
-
-.search-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
  
-}
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-right: 40px;
+      padding-top: 25px;
+      position: absolute;
+      top: 0;
+      right:0;
+    }
 
-.search-input {
-  display: flex;
-  padding-top: 30px;
-  padding-bottom: 20px;
-  justify-content: center;
-  margin-left: auto;
-}
+    .search-form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.search-input input[type="text"] {
-  width: 100%;
-  flex-grow: 1;
-  padding-left: 100px;
-  font-size: 18px;
-  border: none;
-  border-radius: 25px 0 0 25px;
-  background-color: #eee;
-  
-}
+    .search-input {
+      display: flex;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      justify-content: center;
+      margin-left: auto;
+    }
 
-.search-input button[type="submit"] {
-  height: 50px;
-  width: 100px;
-  border: none;
-  background-color:#EDF1D6;
-  border-radius: 0 25px 25px 0;
-  cursor: pointer;
-  color:rgb(55, 78, 60);
-  margin-left: -4px;
-}
+    .search-input input[type="text"] {
+      width: 100%;
+      flex-grow: 1;
+      padding-left: 100px;
+      font-size: 18px;
+      border: none;
+      border-radius: 25px 0 0 25px;
+      background-color: #eee;    
+    }
 
- .search-input button:hover {
+    .search-input button[type="submit"] {
+      height: 50px;
+      width: 100px;
+      border: none;
+      background-color:#EDF1D6;
+      border-radius: 0 25px 25px 0;
+      cursor: pointer;
+      color:rgb(55, 78, 60);
+      margin-left: -4px;
+    }
+
+    .search-input button:hover {
       background-color: #609966;
       color: white;
     }
 
-/* Default styles for larger screens */
 
-.search-container {
-  display: flex;
-  margin: auto;
-  align-items: center;
-  padding-right: 40px;
-}
-
-
-
-
-/* Media query for smaller screens */
-@media screen and (max-width: 768px) {
-  header {
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
-  }
-
-  .search-container {
-     /* Add some spacing between h2 and search container */
-    justify-content: center; 
-    /* Center the search container */
-    padding-right: 100px; /* Remove right padding */
-    
-
-  }
+@media screen and (max-width: 900px) {
+   .search-container {
+    position: relative;
+    padding-top: 0;
+    padding-right: 20px;
+    left: 0;
+   }
 
   .search-input input[type="text"] {
-    padding-left: 100px; /* Reset the padding */
-    width: 80%; /* Adjust the width of the input field */
-   
+    padding-left: 100px; 
+    width: 80%; 
   }
- 
 }
+  
+/*   If this media q is ON, search bar shrinks and dissapears, but jusmps right below the header as we want
+
+ @media screen and (max-width: 900px) {
+  .search-container {
+    padding-right: 435px;
+  }
+}
+ */
+
+
+
+
+
+ 
+ 
+
+ 
+
 
