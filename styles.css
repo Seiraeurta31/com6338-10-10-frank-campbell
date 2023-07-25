@@ -26,17 +26,6 @@
       box-shadow: 1px 1px 6px rgb(113, 113, 113);
       padding: 20px;    }
 
-      /*
-.header-group {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  
-} */
-
-
-
     footer {
       position: sticky;
       bottom: 0;
@@ -48,17 +37,27 @@
       box-shadow: 1px 1px 6px rgb(113, 113, 113);
     }
 
-    main, nav, aside {
-      max-width: 800px;
-      margin: 0 auto;
+   nav, aside {
       margin-top: 50px;
       padding: 0 12px;
     }
 
     main{
       min-height: 100vh;
+      margin-top: 70px;
+      padding: 20px;
+    
     }
 
+   /*  In case we want to style it, here are the basics. Main needs to be adjusted as well. Div class is created, might change to span/id to separate box from the content inside
+   
+   .box {
+      max-width: 900px;
+      padding: 40px;
+      background-color: white;
+     position: absolute;
+     
+    } */ 
     
     h3,
     h4 {
@@ -71,7 +70,7 @@
       padding-top: 50px;
 
     }
-/* needs t be moved to the left*/
+
     .header-landing {     
       color: #EDF1D6;
       font-size: 3.5rem;
@@ -269,29 +268,24 @@
     /* Air Quality */
 
     .search-container {
- 
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      padding-right: 40px;
-      padding-top: 25px;
+      margin-top: 50px;
+      margin-right: 30px;
+      align-items: left;
       position: absolute;
       top: 0;
       right:0;
     }
 
     .search-form {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: left;
+      align-items: left;
+      min-width: 200px;
     }
 
     .search-input {
       display: flex;
-      padding-top: 30px;
-      padding-bottom: 20px;
-      justify-content: center;
-      margin-left: auto;
+      justify-content: left;
+      left: 0;
     }
 
     .search-input input[type="text"] {
@@ -326,7 +320,11 @@
     position: relative;
     padding-top: 0;
     padding-right: 20px;
+    padding-left: 20px;
     left: 0;
+    max-width: 400px;
+    min-width: 400px;
+    
    }
 
   .search-input input[type="text"] {
@@ -334,15 +332,7 @@
     width: 80%; 
   }
 }
-  
-/*   If this media q is ON, search bar shrinks and dissapears, but jusmps right below the header as we want
-
- @media screen and (max-width: 900px) {
-  .search-container {
-    padding-right: 435px;
-  }
-}
- */
+ 
 
 
 
