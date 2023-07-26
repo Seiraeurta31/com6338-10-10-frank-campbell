@@ -60,7 +60,7 @@ async function getAirInfo(lat, lon){
   //********reset info to get ready for other info?******
   searchPlaceholder.value = ""
   ResultsOfAQ.innerHTML = ""
-  airTop.innerHTML = `Air Quality in ${storedLocation}`
+  airTop.innerHTML = `Air Quality Levels in ${storedLocation}`
 
   try{
     const res = await fetch(
