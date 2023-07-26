@@ -37,7 +37,14 @@ async function newLocation(e){
   localStorage.setItem('Location', newLocation)
   storedLocation = localStorage.getItem('Location')
   
-  await longLat(storedLocation)
+  var error = await longLat(storedLocation)
+
+    if(error){
+      airTop.innerHTML = "Location Not Found"
+      ResultsOfAQ.innerHTML = ""
+      searchPlaceholder.value = ""
+        return
+    }
 
   //Access new lat/long data saved to localStorage, then access pollen info for location
   lat = localStorage.getItem('LocationLat')
@@ -52,6 +59,7 @@ async function getAirInfo(lat, lon){
 
   //********reset info to get ready for other info?******
   searchPlaceholder.value = ""
+  ResultsOfAQ.innerHTML = ""
   airTop.innerHTML = `Air Quality in ${storedLocation}`
 
   try{

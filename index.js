@@ -12,7 +12,6 @@ if(airQBtn){
     airQBtn.addEventListener("click", processInput)
 }
 
-
 //take in user info, format location and convert to lat long data
 async function processInput (e){
     console.log("button triggered")

@@ -1,6 +1,6 @@
 /* ALL PAGES */
     html {
-        height: 100%;
+        min-height: 100%;
         margin: 0;
         padding: 0;
         border: 0;
@@ -13,73 +13,94 @@
     }
 
     body {
-    background-color: var(--primary-color);
+    background-image: url('assets/cherryblossompollenpeter-zelei-images.jpg');
+    background-size: cover;
+    background-position:center center;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* background-color: var(--primary-color);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: var(--text);
     margin: 0;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100vh; */
+    /* background: url('../assets/full-bloom.webp'); */
    
     }
 
-    header {
-      background-color: rgb(55, 78, 60);
+    header, .airHeader {
+      background-color: rgb(37, 142, 128);
       box-shadow: 1px 1px 6px rgb(113, 113, 113);
-      padding: 20px;    }
-
-    footer {
-      position: sticky;
-      bottom: 0;
-      font-size: 0.5rem;
-      text-align: center;
-      padding: 10px;
-      margin: 5px 0;
-      background-color: #EDF1D6;
-      box-shadow: 1px 1px 6px rgb(113, 113, 113);
-    }
-
-   nav, aside {
-      margin-top: 50px;
-      padding: 0 12px;
+      padding: 10px;   
+      min-height: 2vh; 
+      border-bottom-width: 5px;
+      border-bottom-style: solid;
+      border-color: #EDF1D6;
     }
 
     main{
-      min-height: 100vh;
-      margin-top: 70px;
-      padding: 20px;
+      max-width: 800px;
+      min-height: 80vh;
+      margin: 0 auto;
+      padding: 0 40px;
+      background-color: rgba(180, 255, 246, 0.521);
+      /* background: transparent; */
+      /* min-height: 100vh; */
+      /* margin-top: 70px; */
+      /* padding: 20px; */
     
     }
 
-   /*  In case we want to style it, here are the basics. Main needs to be adjusted as well. Div class is created, might change to span/id to separate box from the content inside
+   /*  In case we want to style it, here are the basics. 
+   Main needs to be adjusted as well. Div class is created, 
+   might change to span/id to separate box from the content inside*/
    
-   .box {
-      max-width: 900px;
+   .mainContainer {
+    
+    display: flex;
+    margin: 20px 20px;
+      /* max-width: 900px;
+      display: flex;
       padding: 40px;
       background-color: white;
-     position: absolute;
+      position: absolute;
+      margin: 0 auto;
+      background-color: aqua; */
      
-    } */ 
+    }  
     
+      
     h3,
     h4 {
       text-align: center;
       margin: 20px 0;
       
     }
+
     h1 {
       text-align: center;
-      padding-top: 50px;
-
+      padding-top: 20px;
+      color: rgb(5, 84, 75);
+    }
+    
+    header h2{
+      color: #EDF1D6;
+      font-size: 2.5rem;
+      text-align: left;
+      padding-left: 20px;
+      white-space: nowrap;
     }
 
     .header-landing {     
       color: #EDF1D6;
       font-size: 3.5rem;
-      min-height: 10vh;
+      /* min-height: 10vh; */
       display: inline;
-      padding-left: 20px;
+      padding-left: 0 20px;
       white-space: nowrap;
-      
-
     }
 /*
     .header-group {
@@ -100,41 +121,58 @@
     
     } */
 
+    footer {
+
+      /* position: sticky; */
+      bottom: 0;
+      font-size: 0.5rem;
+      text-align: center;
+      padding: 10px;
+      /* margin: 5px 0; */
+      position: relative;
+      background-color: #EDF1D6;
+      box-shadow: 1px 1px 6px rgb(113, 113, 113);
+    }
+
+   /* END ALL PAGES */ 
+
+   /* START INDEX */ 
 
    #landing-b {
-      font-size: 1rem;
+      font-size: 1.1rem;
       color:#EDF1D6;
       text-align: left;
-      margin-top: 20px;
+      margin-top: 5px;
       padding-left: 20px;
      
     }
 
    .landing-h1 {
-      font-size: 70px;
+      font-size: 50px;
       margin: 0 auto;
     }
 
     .landing-h2 {
-      font-size: 35px;
-      margin: 20px auto 0;
+      font-size: 30px;
+      margin: 10px auto 0;
       text-align: center;
     }
 
     h4{
-      font-size: .75rem;
+      font-size: 1rem;
     }
 
     p {
       margin: 12px 0;
     }
-
+    
+  
     button {
       padding: 10px 24px;
       margin-left: 15px;
       background-color: #EDF1D6;
       border: solid 2px var(--button-border);
-      border-radius: 6px;
+      border-radius: 12px;
       color: var(--text);
       font-size: 1rem;
       cursor: pointer;
@@ -203,14 +241,15 @@
       top: 10px;
       width: 100px;
       left: 38%;
-      color:var(--text);
-      transition: 200ms ease-out;
+      color: black;
+      transition: 100ms ease-out;
+     
     }
 
     #form-location_search input {
       font-size: 1rem;
       padding:20px;
-      background-color: #EDF1D6;
+      background-color: #ffffff;
     }
 
 
@@ -231,10 +270,20 @@
       padding: 10px 5px;
     }
     
+    /* END INDEX */ 
 
+    /* START Pollen and Air Quality */
 
-    /* Pollen and Air Quality */
+    #pollen-results p{
+      font-size: 20px;
+      font-style: bold;
+    }
 
+    #pollenHeader1{
+      font-size: 30px;
+      margin-top: 0;
+    }
+   
     #allergy-information {
       display: flex;
       flex-direction: column;
@@ -248,7 +297,7 @@
       margin-right: auto;
     }
 
-    #allergy-results{
+    #allergy-results, #pollen-results{
       margin-bottom: 25px;
     }
 
@@ -315,32 +364,128 @@
     }
 
 
+
+
+
 @media screen and (max-width: 900px) {
    .search-container {
     position: relative;
     padding-top: 0;
     padding-right: 20px;
     padding-left: 20px;
-    left: 0;
-    max-width: 400px;
-    min-width: 400px;
-    
+    left: 20px;
+    margin: 0 auto;
+    max-width: 300px;
+    min-width: 30px;
+   }
+
+   header{
+    height: 100px;
+    padding-top: 25px;
+   }
+
+   .airHeader, .pollenHeader {
+    min-height: 25vh;
+   }
+
+   #pollenHeader1{
+    margin: 0 20px;
+   }
+
+   .landing-h2{
+    margin: 20px 20px 0 20px;
+   }
+
+   .landing-body header{
+    min-height: 25px;
+   }
+
+   .header-landing{
+    text-align: center;
+    display: block;
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
+   }
+
+   #landing-b{
+    text-align: center;
+    display: block;
+    margin-top: 0px;
+    /* padding-left: 20px; */
+    margin-top: 0;
+    margin: 0 20px;
+    padding-top: 0;
+    padding-bottom: 20px;
+
    }
 
   .search-input input[type="text"] {
     padding-left: 100px; 
     width: 80%; 
   }
-}
- 
 
+  main{
+    min-width: 350px;
+    max-width: 800px;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(180, 255, 246, 0.521);
+    /* background: transparent; */
+    /* min-height: 100vh; */
+    /* margin-top: 70px; */
+    /* padding: 20px; */
+  
+  }
 
+  .landing-h1 {
+    font-size: 50px;
+    margin: 0;
+    text-align: center;
+  }
 
+  .landing-h2 {
+    font-size: 30px;
+    /* margin: 10px auto 0; */
+    text-align: center;
+    display: block;
+  }
 
+  .mainContainer {
+    
+    display: flex;
+    margin: 0;
+    text-align: center;
+    }  
+  
+  .pollen-btn, .air-btn {
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 1px 1px;
+  }
 
- 
- 
+  #allergySearch{
+    margin-left: -30px;
+  }
 
- 
+  .search-input button[type="submit"] {
+        margin-left: -2px;
+        height: 50px;
+        width: 100px;
+        border: none;
+        background-color:#EDF1D6;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+        color:rgb(55, 78, 60);
+        margin-left: -4px;
+  }
+
+/* }
+
+.search-input button[type="submit"] {
+
+} */
 
 
