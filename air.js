@@ -40,9 +40,9 @@ async function newLocation(e){
   var error = await longLat(storedLocation)
 
     if(error){
-        pollenResults.innerHTML = 
-        `<p>"Location Not Found"</p>`
-        searchPlaceholder.value = ""
+      airTop.innerHTML = "Location Not Found"
+      ResultsOfAQ.innerHTML = ""
+      searchPlaceholder.value = ""
         return
     }
 
@@ -59,6 +59,7 @@ async function getAirInfo(lat, lon){
 
   //********reset info to get ready for other info?******
   searchPlaceholder.value = ""
+  ResultsOfAQ.innerHTML = ""
   airTop.innerHTML = `Air Quality in ${storedLocation}`
 
   try{

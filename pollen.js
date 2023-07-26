@@ -42,7 +42,8 @@ async function newLocation(e){
 
     //Test if the searched location exists
     if(error){
-        pollenResults.innerHTML = "Location Not Found"
+        pollenHeadline.innerHTML = "Location Not Found"
+        pollenResults.innerHTML = ""
         searchPlaceholder.value = ""
         return
     }

@@ -417,6 +417,7 @@
     margin-top: 0;
     margin: 0 20px;
     padding-top: 0;
+    padding-bottom: 20px;
 
    }
 
@@ -471,19 +472,20 @@
 
   .search-input button[type="submit"] {
         margin-left: -2px;
+        height: 50px;
+        width: 100px;
+        border: none;
+        background-color:#EDF1D6;
+        border-radius: 0 25px 25px 0;
+        cursor: pointer;
+        color:rgb(55, 78, 60);
+        margin-left: -4px;
   }
 
-}
+/* }
 
 .search-input button[type="submit"] {
-  height: 50px;
-  width: 100px;
-  border: none;
-  background-color:#EDF1D6;
-  border-radius: 0 25px 25px 0;
-  cursor: pointer;
-  color:rgb(55, 78, 60);
-  margin-left: -4px;
-}
+
+} */
 
 
