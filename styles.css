@@ -6,14 +6,16 @@
         border: 0;
     }
     :root {
-      --primary-color: #c1dcb3;
-      --text: rgb(55, 78, 60);;
-      --button-bg: #609966;
+      --primary-color: rgba(150, 187, 124);
+      --text: #184D47;
+      --button-bg: #FAE392;
+      --button-text: 
+black;
      
     }
 
     body {
-    background-image: url('assets/cherryblossompollenpeter-zelei-images.jpg');
+    background-image: url('assets/nature.jpeg');
     background-size: cover;
     background-position:center center;
     margin: 0;
@@ -32,7 +34,7 @@
     }
 
     header, .airHeader {
-      background-color: rgb(37, 142, 128);
+      background-color: #41644A;
       box-shadow: 1px 1px 6px rgb(113, 113, 113);
       padding: 10px;   
       min-height: 2vh; 
@@ -46,7 +48,9 @@
       min-height: 80vh;
       margin: 0 auto;
       padding: 0 40px;
-      background-color: rgba(180, 255, 246, 0.521);
+      background-color:
+rgb(150, 187, 124, 0.95);
+      
       /* background: transparent; */
       /* min-height: 100vh; */
       /* margin-top: 70px; */
@@ -62,6 +66,7 @@
     
     display: flex;
     margin: 20px 20px;
+    
       /* max-width: 900px;
       display: flex;
       padding: 40px;
@@ -83,7 +88,8 @@
     h1 {
       text-align: center;
       padding-top: 20px;
-      color: rgb(5, 84, 75);
+      color: #263A29;
+      
     }
     
     header h2{
@@ -150,12 +156,14 @@
    .landing-h1 {
       font-size: 50px;
       margin: 0 auto;
+      color: #263A29;
     }
 
     .landing-h2 {
       font-size: 30px;
       margin: 10px auto 0;
       text-align: center;
+      color:#212121;
     }
 
     h4{
@@ -170,10 +178,11 @@
     button {
       padding: 10px 24px;
       margin-left: 15px;
-      background-color: #EDF1D6;
+      background-color: var(--button-bg);
       border: solid 2px var(--button-border);
+      opacity: 1;
       border-radius: 12px;
-      color: var(--text);
+      color: var(--button-text);
       font-size: 1rem;
       cursor: pointer;
       transition: 200ms;
@@ -351,7 +360,7 @@
       height: 50px;
       width: 100px;
       border: none;
-      background-color:#EDF1D6;
+      background-color:#FAE392;
       border-radius: 0 25px 25px 0;
       cursor: pointer;
       color:rgb(55, 78, 60);
@@ -481,11 +490,9 @@
         color:rgb(55, 78, 60);
         margin-left: -4px;
   }
-
+}
 /* }
 
 .search-input button[type="submit"] {
 
 } */
-
-
