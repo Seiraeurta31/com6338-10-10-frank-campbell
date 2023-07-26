@@ -95,7 +95,7 @@ rgb(150, 187, 124, 0.90);
 
     h1 {
       text-align: center;
-      padding-top: 20px;
+      padding-top: 40px;
       color: #263A29;
       
     }
@@ -298,9 +298,9 @@ rgb(150, 187, 124, 0.90);
     }
 
 
-    #pollenHeader1, .airTop {
+    #pollenHeader1, #airTop {
       font-size: 30px;
-      margin-top: 0;
+      margin-top: 20px;
      
      
     }
@@ -403,14 +403,8 @@ rgb(150, 187, 124, 0.90);
     min-width: 30px;
    }
 
- 
-
    .airHeader, .pollenHeader {
     min-height: 18vh;
-   }
-
-   #pollenHeader1{
-    margin: 0 20px;
    }
 
    .landing-h2{
