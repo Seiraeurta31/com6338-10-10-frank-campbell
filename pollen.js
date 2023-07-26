@@ -38,8 +38,15 @@ async function newLocation(e){
     storedLocation = localStorage.getItem('Location')
     // storedLocation = storedLocation.charAt(0).toUpperCase() + storedLocation.slice(1).toLowerCase()
     
-    await longLat(storedLocation)
+    var error = await longLat(storedLocation)
 
+    //Test if the searched location exists
+    if(error){
+        pollenResults.innerHTML = "Location Not Found"
+        searchPlaceholder.value = ""
+        return
+    }
+    
     //Access new lat/long data saved to localStorage, then access pollen info for location
     lat = localStorage.getItem('LocationLat')
     lon = localStorage.getItem('LocationLon')
