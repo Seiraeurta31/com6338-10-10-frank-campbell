@@ -32,7 +32,15 @@ black;
     /* background: url('../assets/full-bloom.webp'); */
    
     }
+     
+    body.pollen-body {
+      background-image: url('assets/springallergens.jpg');
+    }
 
+body.air-body {
+      background-image: url('assets/smoke.jpeg');
+           
+    }
     header, .airHeader {
       background-color: #41644A;
       box-shadow: 1px 1px 6px rgb(113, 113, 113);
@@ -49,7 +57,7 @@ black;
       margin: 0 auto;
       padding: 0 40px;
       background-color:
-rgb(150, 187, 124, 0.95);
+rgb(150, 187, 124, 0.90);
       
       /* background: transparent; */
       /* min-height: 100vh; */
@@ -192,6 +200,7 @@ rgb(150, 187, 124, 0.95);
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 20px;
     }
 
 
@@ -283,14 +292,17 @@ rgb(150, 187, 124, 0.95);
 
     /* START Pollen and Air Quality */
 
-    #pollen-results p{
+    #pollen-results p, #air-results p {
       font-size: 20px;
       font-style: bold;
     }
 
-    #pollenHeader1{
+
+    #pollenHeader1, .airTop {
       font-size: 30px;
       margin-top: 0;
+     
+     
     }
    
     #allergy-information {
@@ -372,29 +384,29 @@ rgb(150, 187, 124, 0.95);
       color: white;
     }
 
-
-
+.info {
+  margin:50px;
+  display:block;
+  font-size: 20px;
+}
 
 
 @media screen and (max-width: 900px) {
    .search-container {
     position: relative;
     padding-top: 0;
-    padding-right: 20px;
-    padding-left: 20px;
+   
+    padding-left: 50px;
     left: 20px;
     margin: 0 auto;
     max-width: 300px;
     min-width: 30px;
    }
 
-   header{
-    height: 100px;
-    padding-top: 25px;
-   }
+ 
 
    .airHeader, .pollenHeader {
-    min-height: 25vh;
+    min-height: 18vh;
    }
 
    #pollenHeader1{
@@ -430,17 +442,14 @@ rgb(150, 187, 124, 0.95);
 
    }
 
-  .search-input input[type="text"] {
-    padding-left: 100px; 
-    width: 80%; 
-  }
+
 
   main{
     min-width: 350px;
     max-width: 800px;
     margin: 0;
     padding: 0;
-    background-color: rgba(180, 255, 246, 0.521);
+    
     /* background: transparent; */
     /* min-height: 100vh; */
     /* margin-top: 70px; */
@@ -476,7 +485,9 @@ rgb(150, 187, 124, 0.95);
   }
 
   #allergySearch{
-    margin-left: -30px;
+    margin-left: -80px;
+   
+    padding-left: 100px;
   }
 
   .search-input button[type="submit"] {
@@ -484,15 +495,10 @@ rgb(150, 187, 124, 0.95);
         height: 50px;
         width: 100px;
         border: none;
-        background-color:#EDF1D6;
+        
         border-radius: 0 25px 25px 0;
         cursor: pointer;
         color:rgb(55, 78, 60);
         margin-left: -4px;
   }
 }
-/* }
-
-.search-input button[type="submit"] {
-
-} */
