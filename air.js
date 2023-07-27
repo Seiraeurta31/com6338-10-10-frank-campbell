@@ -21,7 +21,7 @@ if(searchBtn){
 if (storedLocation) {
   storedLocation =
     storedLocation.charAt(0).toUpperCase() + storedLocation.slice(1)     // Capitalize the first letter of the location and store it back in storedLocation
-  localStorage.setItem("Location", storedLocation)
+  localStorage.setItem('Location', storedLocation)
 }
 
 //Fetch and display the air quality information with stored lat/long data
@@ -33,12 +33,12 @@ async function newLocation(e){
   e.preventDefault()    //Prevent the default form submission behavior, to avoid page from reloading
 
   //When new search is entered, format it, store it, then convert to new lat/long
-  var newLocation = document.querySelector("input").value.trim()
+  var newLocation = document.querySelector('input').value.trim()
   newLocation =
     newLocation.charAt(0).toUpperCase() + newLocation.slice(1).toLowerCase()
 
-  localStorage.setItem("Location", newLocation)     // Store new location in the browser's local storage, update stored location
-  storedLocation = localStorage.getItem("Location")    // Retrieve the updated location from local storage. add to stored location
+  localStorage.setItem('Location', newLocation)     // Store new location in the browser's local storage, update stored location
+  storedLocation = localStorage.getItem('Location')    // Retrieve the updated location from local storage. add to stored location
 
   //Retrieve lat/long data from index.js
   var error = await longLat(storedLocation)
@@ -51,8 +51,8 @@ async function newLocation(e){
   }
 
   //Access new lat/long data saved to localStorage, then access AQ info for location
-  lat = localStorage.getItem("LocationLat")
-  lon = localStorage.getItem("LocationLon")
+  lat = localStorage.getItem('LocationLat')
+  lon = localStorage.getItem('LocationLon')
 
   //Get Air Quality information for the new location
   getAirInfo(lat, lon)
@@ -70,7 +70,7 @@ async function getAirInfo(lat, lon){
     )
 
     //Error thrown if invalid
-    if (res.status !== 200) throw new Error("Information not found")
+    if (res.status !== 200) throw new Error('Information not found')
     var dataAq = await res.json()
 
     //Display data 
