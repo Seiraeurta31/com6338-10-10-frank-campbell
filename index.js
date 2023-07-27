@@ -36,7 +36,7 @@ async function processInput (e){
       else{
           window.location.href="air.html"
       }
-
+ 
     }catch(err){
         instructions.innerHTML = "Location Not Found"
         form.locationSearch.value = "" 
@@ -47,6 +47,8 @@ async function processInput (e){
 
 //Get lat/long from user location input
 async function longLat (storedLocation){
+
+    // try to retrieve lat/long info using stored location
     try{
     const res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${storedLocation},US&units=imperial&appid=08ace7633004d5ddf370678a8c052e90`
@@ -54,7 +56,7 @@ async function longLat (storedLocation){
     if(res.status !== 200) throw new Error(err)
     var locationInfo = await res.json()
 
-    //
+    //Location found, no error exists
     localStorage.setItem('locationError', false)
 
      const {
@@ -64,22 +66,18 @@ async function longLat (storedLocation){
     }
      } = locationInfo
 
-    //  getAirInfo(lat, lon)
-
-    console.log("index lat long : " + lat + ", " + lon)
+    //Store lat/long data to access on other pages
     localStorage.setItem('LocationLat', lat)
     localStorage.setItem('LocationLon', lon)
-    console.log ("index saved new lat long " + lat + ", " + lon)
-
-    console.log(lat + ", " + lon)
 
     } catch (err) {
-      console.log("error caught1")
+      //Error exists. Set stored error value to true on other pages
       localStorage.setItem('locationError', true)
       locationError = localStorage.getItem('locationError')
-      console.log("location error " + locationError)
+
+      //Remove lat/long data to avoid using stored values in error on other pages
       localStorage.removeItem('LocationLat')
       localStorage.removeItem('LocationLon')
-      return locationError
+      return locationError // returns true
     }  
 }

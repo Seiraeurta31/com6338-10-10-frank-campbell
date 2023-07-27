@@ -7,17 +7,17 @@ var lat = localStorage.getItem('LocationLat')
 var lon = localStorage.getItem('LocationLon')
 var searchPlaceholder = document.getElementById('allergySearch')
 
+//Set default values for results display 
 airTop.innerHTML = ""
 ResultsOfAQ.innerHTML =""
 
-
-//set new search buton and confirm if button id exists before adding event listner
+//Set new search buton and confirm if button id exists before adding event listner
 var searchBtn = document.getElementById("searchBtn")
 if(searchBtn){
     searchBtn.addEventListener("click", newLocation)
 }
 
-//set new search buton and confirm if button id exists before adding event listner
+//Format user input from main into proper capitalization
 if (storedLocation) {
   storedLocation =
     storedLocation.charAt(0).toUpperCase() + storedLocation.slice(1)
@@ -28,15 +28,17 @@ if (storedLocation) {
 getAirInfo(lat, lon)
 
 
+//Sets new search location into storage and calls on function to get lat lon from new location
 async function newLocation(e){
   e.preventDefault() 
-   
+  
   //Take in user input with new search, format it, store it, then convert to new lat/long
   var newLocation = document.querySelector('input').value.trim() 
   newLocation = newLocation.charAt(0).toUpperCase() + newLocation.slice(1).toLowerCase()
   localStorage.setItem('Location', newLocation)
   storedLocation = localStorage.getItem('Location')
   
+  //Calls on function in index.js to retrieve lat/long data 
   var error = await longLat(storedLocation)
 
     if(error){
@@ -52,22 +54,23 @@ async function newLocation(e){
   
   //Get Air Quality information
   getAirInfo(lat, lon)
-
 }
 
 async function getAirInfo(lat, lon){
 
-  //********reset info to get ready for other info?******
+  //Resets input field to empty 
   searchPlaceholder.value = ""
-  // ResultsOfAQ.innerHTML = ""
-  
 
+  //Retrieve air quality info using stored lat/long info
   try{
     const res = await fetch(
       `https://api.breezometer.com/air-quality/v2/current-conditions?lat=${lat}&lon=${lon}&key=c2d66421775a47b39aa2a5e2b0de6bbe&features=breezometer_aqi,local_aqi,health_recommendations,sources_and_effects,pollutants_concentrations,pollutants_aqi_information`
     )
+    //Error thrown if invalid
     if (res.status !== 200) throw new Error('Information not found')
     var dataAq = await res.json()
+    
+    //Display data to user
     airTop.innerHTML = `Air Quality Levels in ${storedLocation}`
     ResultsOfAQ.innerHTML = 
     `<p>${`Air Quality Index: ${dataAq.data.indexes.baqi.aqi_display}`}</p>
@@ -79,12 +82,5 @@ async function getAirInfo(lat, lon){
     airTop.innerHTML ="Location Not Found"
     return
   }
-
-  // try{
-    
-  // }catch{
-  //   return
-  // }
-  
 
 }

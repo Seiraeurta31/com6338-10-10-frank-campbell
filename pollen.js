@@ -16,7 +16,7 @@ if(searchBtn){
     searchBtn.addEventListener("click", newLocation)
 }
 
-//Format user input to proper capitalization
+//Format user input from main into proper capitalization
 if(storedLocation){
     storedLocation = storedLocation.charAt(0).toUpperCase() + storedLocation.slice(1).toLowerCase()
     localStorage.setItem('Location', storedLocation)   
