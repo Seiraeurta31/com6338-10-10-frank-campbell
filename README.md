@@ -26,10 +26,8 @@ AIR QUALITY (Oliva)
 	Display info:	
 	(Use local storage variable for data collection)
 		Overall Quality: (Index)
-		(Color icons for level -RED, YELLOW, GREEN)
-		Ozone Concentration: 
-		Carbon Monoxide: 
-		Health Concern:
+	    Level
+		Dominant Pollutant
 	Buttons: (Main) (Pollen Level) 
 
 
@@ -43,6 +41,8 @@ map by location: https://www.google.com/maps/search/?api=1&query=cleveland+Ohio
 GOOGLE API KEY: AIzaSyDm9WPv8_3Wnruym8e30Z3qhTsNJm0dBDc
 
 Pollen API URL: https://api.breezometer.com/pollen/v2/forecast/daily?lat={latitude}&lon={longitude}&key=YOUR_API_KEY&features={Features_List}&days={Number_of_Days}
+
+apiKey for Air Quality = 'c2d66421775a47b39aa2a5e2b0de6bbe'
 
 breezometer API for Pollen page:d8f9dcc96f87425a8e375f4f7ae2c788
 
