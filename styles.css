@@ -338,15 +338,7 @@
     /* Media Q */
 
 @media screen and (max-width: 900px) {
-   .search-container {
-    position: relative;
-    padding-top: 0;
-    padding-left: 50px;
-    left: 20px;
-    margin: 0 auto;
-    max-width: 300px;
-    min-width: 30px;
-   }
+   
 
    .airHeader, .pollenHeader {
     min-height: 18vh;
@@ -369,15 +361,7 @@
     padding-bottom: 0;
    }
 
-   #landing-b{
-    text-align: center;
-    display: block;
-    margin-top: 0px;
-    margin-top: 0;
-    margin: 0 20px;
-    padding-top: 0;
-    padding-bottom: 20px;
-   }
+
 
   main{
     min-width: 350px;
@@ -408,6 +392,4 @@
     margin-left: -80px;
     padding-left: 100px;
   }
-
-
 }
