@@ -7,8 +7,8 @@ var lat = localStorage.getItem('LocationLat')
 var lon = localStorage.getItem('LocationLon')
 var searchPlaceholder = document.getElementById('allergySearch')
 
-airTop.innerHTML = `Air Quality`
-ResultsOfAQ.innerHTML =" "
+airTop.innerHTML = ""
+ResultsOfAQ.innerHTML =""
 
 
 //set new search buton and confirm if button id exists before adding event listner
@@ -59,23 +59,32 @@ async function getAirInfo(lat, lon){
 
   //********reset info to get ready for other info?******
   searchPlaceholder.value = ""
-  ResultsOfAQ.innerHTML = ""
-  airTop.innerHTML = `Air Quality Levels in ${storedLocation}`
+  // ResultsOfAQ.innerHTML = ""
+  
 
   try{
     const res = await fetch(
       `https://api.breezometer.com/air-quality/v2/current-conditions?lat=${lat}&lon=${lon}&key=c2d66421775a47b39aa2a5e2b0de6bbe&features=breezometer_aqi,local_aqi,health_recommendations,sources_and_effects,pollutants_concentrations,pollutants_aqi_information`
     )
     if (res.status !== 200) throw new Error('Information not found')
-    
     var dataAq = await res.json()
+    airTop.innerHTML = `Air Quality Levels in ${storedLocation}`
+    ResultsOfAQ.innerHTML = 
+    `<p>${`Air Quality Index: ${dataAq.data.indexes.baqi.aqi_display}`}</p>
+      <p>${`Level: ${dataAq.data.indexes.baqi.category}`}</p>
+       <p>${`Dominant Pollutant: ${dataAq.data.indexes.baqi.dominant_pollutant}`}</p>`
+    
   }catch(err){
-    ResultsOfAQ.innerHTML = err.message
+    ResultsOfAQ.innerHTML = ""
+    airTop.innerHTML ="Location Not Found"
+    return
   }
 
-  ResultsOfAQ.innerHTML = 
-  `<p>${`Air Quality Index: ${dataAq.data.indexes.baqi.aqi_display}`}</p>
-    <p>${`Level: ${dataAq.data.indexes.baqi.category}`}</p>
-     <p>${`Dominant Pollutant: ${dataAq.data.indexes.baqi.dominant_pollutant}`}</p>`
+  // try{
+    
+  // }catch{
+  //   return
+  // }
+  
 
 }

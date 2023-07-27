@@ -12,64 +12,51 @@ if(airQBtn){
     airQBtn.addEventListener("click", processInput)
 }
 
-//take in user info, format location and convert to lat long data
+//Take in user info, format location and convert to lat long data
 async function processInput (e){
-    console.log("button triggered")
-    localStorage.setItem('locationError', false)
     e.preventDefault() 
     var location = document.querySelector('input').value.trim() 
     if(!location) return
 
+    //Format input
     location =location.charAt(0).toUpperCase() + location.slice(1).toLowerCase()
     localStorage.setItem('Location', location)
     
     try{
-      //get lat/lon data from user input
+      //Attempt to get lat/lon data, returns true if error exists
       var error = await longLat(location)
-      console.log("returned to lat lon")
-      console.log ("error " + error)
+     
+      //Catch error if location not found
       if(error) throw new Error(err)
-      //catch error if location not found
-      
-      console.log("pages triggered")
+
+      //If lat.long data exists, switch to corosponding page
       if(this.id == "pollenButton"){
-        console.log("pages triggered")
-        //switches to pollen page
         window.location.href="pollen.html"
       }
       else{
-          //switches to air quality page
           window.location.href="air.html"
       }
 
     }catch(err){
-      console.log("error caught2")
-      if(error){
         instructions.innerHTML = "Location Not Found"
         form.locationSearch.value = "" 
         return
-    }
-      
+    }     
 }           
-    console.log("error status " + error)
-  
-}
 
 
-//get lat long from user location input
+//Get lat/long from user location input
 async function longLat (storedLocation){
-  console.log("lat/long triggered")
-  console.log("storedLocation : " + storedLocation)
-  localStorage.setItem('locationError', false)
-
     try{
     const res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${storedLocation},US&units=imperial&appid=08ace7633004d5ddf370678a8c052e90`
     )
-    console.log(res.status)
     if(res.status !== 200) throw new Error(err)
     var locationInfo = await res.json()
-    
+
+    //
+    localStorage.setItem('locationError', false)
+
      const {
        coord: { 
         lat,
@@ -91,7 +78,8 @@ async function longLat (storedLocation){
       localStorage.setItem('locationError', true)
       locationError = localStorage.getItem('locationError')
       console.log("location error " + locationError)
+      localStorage.removeItem('LocationLat')
+      localStorage.removeItem('LocationLon')
       return locationError
     }  
 }
-
