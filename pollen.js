@@ -99,8 +99,4 @@ async function getPollenInfo(lat, lon){
         return
     } 
     
-
-    
-    
-
 }

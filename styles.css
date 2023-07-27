@@ -101,6 +101,13 @@
       box-shadow: 1px 1px 6px rgb(113, 113, 113);
     }
 
+    .info {
+      margin:50px;
+      display:block;
+      font-size: 21px;
+      color: var(--h2);
+    }
+
    /* END ALL PAGES */ 
 
    /* START INDEX */ 
@@ -235,6 +242,8 @@
       padding: 10px 5px;
     }
     
+
+
     /* END INDEX */ 
 
     /* START Pollen and Air Quality */
@@ -328,11 +337,7 @@
       color: var(--hover-text);
     }
 
-    .info {
-      margin:50px;
-      display:block;
-      font-size: 20px;
-    }
+ 
 
 
     /* Media Q */
