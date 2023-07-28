@@ -86,7 +86,7 @@ async function getPollenInfo(lat, lon){
         }   
 
         //Display results to user
-        pollenHeadline.innerHTML = `Local Pollen Levels for ${storedLocation}`
+        pollenHeadline.innerHTML = `Pollen Levels for ${storedLocation}`
         pollenResults.innerHTML = 
         `<p>${`Grass: ${grassValue}`}</p>
         <p>${`Weed: ${weedValue}`}</p>
