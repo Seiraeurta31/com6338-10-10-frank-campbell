@@ -42,7 +42,7 @@ GOOGLE API KEY: AIzaSyDm9WPv8_3Wnruym8e30Z3qhTsNJm0dBDc
 
 Pollen API URL: https://api.breezometer.com/pollen/v2/forecast/daily?lat={latitude}&lon={longitude}&key=YOUR_API_KEY&features={Features_List}&days={Number_of_Days}
 
-apiKey for Air Quality = 'c2d66421775a47b39aa2a5e2b0de6bbe'
+apiKey for Air Quality = '480731dcb6fb44b490bb889fccedb762'
 
 breezometer API for Pollen page:d8f9dcc96f87425a8e375f4f7ae2c788
 

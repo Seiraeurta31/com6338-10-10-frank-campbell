@@ -66,7 +66,9 @@ async function getPollenInfo(lat, lon){
     
     //Use longitude latitude values to access pollen API information
     try{
-        const res = await fetch(`https://api.breezometer.com/pollen/v2/forecast/daily?lat=${lat}&lon=${lon}&days=1&key=c2d66421775a47b39aa2a5e2b0de6bbe&features=types_information,plants_information`)
+        const res = await fetch(
+          `https://api.breezometer.com/pollen/v2/forecast/daily?lat=${lat}&lon=${lon}&days=1&key=480731dcb6fb44b490bb889fccedb762&features=types_information,plants_information`
+        );
         if(res.status !== 200) throw new Error('Information not found')
         var pollenData = await res.json() 
       
