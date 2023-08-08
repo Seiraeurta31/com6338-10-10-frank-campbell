@@ -66,8 +66,8 @@ async function getAirInfo(lat, lon){
   // Fetch air quality information from the BreezoMeter API
   try {
     const res = await fetch(
-      `https://api.breezometer.com/air-quality/v2/current-conditions?lat=${lat}&lon=${lon}&key=c2d66421775a47b39aa2a5e2b0de6bbe&features=breezometer_aqi,local_aqi,health_recommendations,sources_and_effects,pollutants_concentrations,pollutants_aqi_information`
-    )
+      `https://api.breezometer.com/air-quality/v2/current-conditions?lat=${lat}&lon=${lon}&key=480731dcb6fb44b490bb889fccedb762&features=breezometer_aqi,local_aqi,health_recommendations,sources_and_effects,pollutants_concentrations,pollutants_aqi_information`
+    );
 
     //Error thrown if invalid
     if (res.status !== 200) throw new Error('Information not found')
